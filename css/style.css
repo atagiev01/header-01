@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.d-block {
+  display: none;
+}
+
+body {
+  background: white;
+  color: black;
+}
+body header {
+  position: fixed;
+  width: 100%;
+  height: 60px !important;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  background: transparent;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+body header .container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0px 30px;
+  justify-content: space-between;
+}
+body header img {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+body header .bx-x:before {
+  content: "\ec8d";
+  position: absolute;
+  right: 53%;
+  top: 10px;
+  -webkit-animation: all 50s infinite;
+          animation: all 50s infinite;
+}
+body header .navbar {
+  display: flex;
+  margin: auto;
+  width: 20%;
+}
+body header .navbar a {
+  color: black;
+  font-size: 19px;
+  padding: 5px 0;
+  margin: 0px 30px;
+  transition: all 0.5s ease;
+}
+body header .navbar a:hover {
+  color: green;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+.main .main-flex {
+  display: flex;
+  align-items: center;
+}
+.main a {
+  margin-left: 10px;
+  color: black;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+.main span {
+  font-size: 16px;
+}
+.main a:hover {
+  color: red;
+}
+.main .user {
+  display: flex;
+  align-items: center;
+}
+.main i {
+  font-weight: 100;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+header .navbar .main .user i {
+  margin-right: 7px;
+}
+
+header .navbar .main .fa {
+  font-size: 19px;
+}
+
+#menu-icon {
+  font-size: 35px;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  header {
+    padding: 14px 2%;
+    transition: 0.2s;
+  }
+  header .navbar a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  hr {
+    display: block;
+    visibility: visible !important;
+    border: 0.01px solid black;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .d-none-logo {
+    display: none;
+  }
+  .d-block {
+    display: block;
+    margin: 14px 50px 19px;
+  }
+  .bx-x:before {
+    right: 65%;
+    -webkit-animation: 2s anim-lineUp ease-out forwards !important;
+            animation: 2s anim-lineUp ease-out forwards !important;
+  }
+  @-webkit-keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  .container {
+    padding: 5px !important;
+  }
+  .navbar {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    opacity: 0;
+    visibility: visible;
+  }
+  .navbar a {
+    display: block;
+  }
+  .navbar a:hover {
+    transform: translateY(5px);
+  }
+  .navbar.open {
+    top: 0%;
+    left: 0;
+    width: 50% !important;
+    height: 100vh !important;
+    background-color: #ddd;
+    -webkit-animation: 1s anim-lineUp ease-in-out forwards !important;
+            animation: 1s anim-lineUp ease-in-out forwards !important;
+    opacity: 2;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(0%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  .navbar.open a {
+    margin: 10px 50px;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  .main .mentioned {
+    display: none;
+  }
+  .main .user span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .navbar.open {
+    width: 60% !important;
+  }
+  .bx-x:before {
+    right: 45% !important;
+  }
+  header .container {
+    padding: 0px !important;
+  }
+  .main .user span {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  header .container {
+    padding: 0px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
